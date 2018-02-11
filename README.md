@@ -1,15 +1,14 @@
 ### web crawler
 #### Server
-** Node.js - **
+##### Node.js -
 
 A simple scraper module- scraping dynamic content in weather website (http://mavir.co.il/)
 
 ##### Installation
 
-** In server folder: **
+###### In server folder:
 
 ```
-
 npm install
 
 node index.js
@@ -17,7 +16,7 @@ node index.js
 
 
 #### Client
-** AngularJS - **
+##### AngularJS - 
 
 Interface- display current weather in Tel Aviv and Jerusalem.
 
