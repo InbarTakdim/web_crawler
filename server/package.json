@@ -1,5 +1,5 @@
 {
-  "name": "try2",
+  "name": "web_crawler",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,5 +12,8 @@
     "express": "^4.16.2",
     "http": "0.0.0",
     "scrapr": "0.0.15"
+  },
+  "scripts":{
+    "start":"node index.js"
   }
 }
