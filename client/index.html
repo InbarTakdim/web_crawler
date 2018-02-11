@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body ng-app="myapp" ng-controller="mainController">
+    <div class="alert alert-info" ng-show="loading">Loading</div>
+    <div id="wrapper">
+      <div id="con">
+        <form>
+          <div class="input-group" id="divInput">
+            <lable for="city"></lable>
+            <input autocomplete="off" id="city" ng-keyup="complete(cityDetails)" type="text" placeholder="Enter a city..." class="form-control" ng-model="cityDetails">
+            <div id="listAuto">
+              <ul class="list-group" ng-model="hidethis" ng-hide="hidethis">
+                <li class="list-group-item" ng-repeat="cityData in filterCity" ng-click="fillTextBox(cityData)">{{cityData}}</li>
+              </ul>
+            </div>
+            <span class="input-group-btn">
+              <button id="searchBtn" class="btn btn-primary" ng-click="search()">search</button>
+            </span>
+          </div>
+        </form>
+        <div class="container1">
+          <div id="displayCity">
+            <h3>  {{TelAviv.city}} </h3>
+            <p>Temparture: {{TelAviv.temp}} </p>
+            <p>Humidity: {{TelAviv.humidity}} </p>
+            <p>Windspeed: {{TelAviv.wind}} </p>
+            <img ng-src="{{TelAviv.img}}" class="pic">
+          </div>
+          <div id="displayCity">
+            <h3>  {{Jerusalem.city}}  </h3>
+            <p>Temparture: {{Jerusalem.temp}}  </p>
+            <p>Humidity: {{Jerusalem.humidity}}  </p>
+            <p>Windspeed: {{Jerusalem.wind}}  </p>
+            <img ng-src="{{Jerusalem.img}}" class="pic">
+          </div>
+          <div id="displayCity" ng-show="show3city">
+            <h3>  {{details.city}} </h3>
+            <p>Temparture: {{details.temp}} </p>
+            <p>Humidity: {{details.humidity}} </p>
+            <p>Windspeed: {{details.wind}} </p>
+            <img ng-src="{{details.img}}" class="pic">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

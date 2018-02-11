@@ -1,0 +1,76 @@
+html{
+  height: 100%;
+  overflow: auto;
+}
+body{
+  width: 100%;
+  height: 100%;
+  background-color: #f9fbff;
+  font-family: "Helvetica";
+}
+#divInput{
+  width:500px;
+  padding: 10px;
+  margin: auto;
+}
+#searchBtn{
+  width:100px;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 9px;
+}
+#city{
+  display: inline-block;
+  width: 300px;
+  padding: 6px;
+  margin-top: 5px;
+}
+.container1{
+  width:90%;
+  height:80%;
+  min-height: 80%;
+  padding-top: 20px;
+  text-align: center;
+  position: fixed;
+  z-index: -100;
+}
+#con{
+  width:90%;
+  height:80%;
+  min-height: 80%;
+  padding-top: 20px;
+  text-align: center;
+  position: fixed;
+  margin-left: 5%;
+}
+#displayCity{
+  width: 30%;
+  height: 350px;
+  background-color: #e8effc;
+  margin-right: 10px;
+  margin-top: 5px;
+  display: inline-block;
+}
+p, h3{
+  padding: 5px;
+  text-align: center;
+}
+.pic{
+  width:150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+ul, li{
+  width: 370px;
+}
+#listAuto{
+  position: fixed;
+  margin-top: 47px;
+  z-index: 100;
+}
+#wrapper{
+  position:  absolute;
+  top:70px;
+}
