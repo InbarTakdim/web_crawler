@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Weather App</title>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -15,12 +16,7 @@
         <form>
           <div class="input-group" id="divInput">
             <lable for="city"></lable>
-            <input autocomplete="off" id="city" ng-keyup="complete(cityDetails)" type="text" placeholder="Enter a city..." class="form-control" ng-model="cityDetails">
-            <div id="listAuto">
-              <ul class="list-group" ng-model="hidethis" ng-hide="hidethis">
-                <li class="list-group-item" ng-repeat="cityData in filterCity" ng-click="fillTextBox(cityData)">{{cityData}}</li>
-              </ul>
-            </div>
+            <input id="city"  type="text" placeholder="Enter a city..." class="form-control" ng-model="cityDetails" googleplace/>
             <span class="input-group-btn">
               <button id="searchBtn" class="btn btn-primary" ng-click="search()">search</button>
             </span>
@@ -29,23 +25,23 @@
         <div class="container1">
           <div id="displayCity">
             <h3>  {{TelAviv.city}} </h3>
-            <p>Temparture: {{TelAviv.temp}} </p>
+            <p>Temparture: {{TelAviv.temp}}&deg </p>
             <p>Humidity: {{TelAviv.humidity}} </p>
-            <p>Windspeed: {{TelAviv.wind}} </p>
+            <p>Windspeed: {{TelAviv.wind}} km/h</p>
             <img ng-src="{{TelAviv.img}}" class="pic">
           </div>
           <div id="displayCity">
             <h3>  {{Jerusalem.city}}  </h3>
-            <p>Temparture: {{Jerusalem.temp}}  </p>
+            <p>Temparture: {{Jerusalem.temp}}&deg </p>
             <p>Humidity: {{Jerusalem.humidity}}  </p>
-            <p>Windspeed: {{Jerusalem.wind}}  </p>
+            <p>Windspeed: {{Jerusalem.wind}} km/h</p>
             <img ng-src="{{Jerusalem.img}}" class="pic">
           </div>
           <div id="displayCity" ng-show="show3city">
             <h3>  {{details.city}} </h3>
-            <p>Temparture: {{details.temp}} </p>
+            <p>Temparture: {{details.temp}}&deg </p>
             <p>Humidity: {{details.humidity}} </p>
-            <p>Windspeed: {{details.wind}} </p>
+            <p>Windspeed: {{details.wind}} km/h</p>
             <img ng-src="{{details.img}}" class="pic">
           </div>
         </div>

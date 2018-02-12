@@ -13,9 +13,6 @@ app.all('*', (req, res, next)=> {
 
 app.get('/weatherByCity/:city' , (req, res)=> {
   var city=req.params.city;
-  if(city.indexOf(" ") != -1){
-    city= city.replace(" " , "_");
-  }
   weatherModule(city, res);
 });
 

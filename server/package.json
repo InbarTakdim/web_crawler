@@ -4,16 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
     "http": "0.0.0",
-    "scrapr": "0.0.15"
-  },
-  "scripts":{
-    "start":"node index.js"
+    "puppeteer": "^1.0.0"
   }
 }
